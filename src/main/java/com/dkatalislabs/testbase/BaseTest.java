@@ -1,4 +1,4 @@
-package com.dkatalislabs.basecorelogic;
+package com.dkatalislabs.testbase;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import com.dkatalislabs.utilities.ActionMethods;
 
 public class BaseTest {
 

@@ -116,17 +116,17 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "BuyProductPageStepDefinations.user_is_on_the_homepage()"
+  "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
 });
 formatter.result({
-  "duration": 444104280,
+  "duration": 5267164531,
   "status": "passed"
 });
 formatter.match({
-  "location": "BuyProductPageStepDefinations.user_proceeds_for_checkout()"
+  "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
 });
 formatter.result({
-  "duration": 24613,
+  "duration": 41493351666,
   "status": "passed"
 });
 formatter.match({
@@ -148,17 +148,17 @@ formatter.match({
       "offset": 86
     }
   ],
-  "location": "BuyProductPageStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)"
+  "location": "BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 1694435,
+  "duration": 4106414,
   "status": "passed"
 });
 formatter.match({
-  "location": "BuyProductPageStepDefinations.verify_payment_is_successfully_completed()"
+  "location": "BuyProductStepDefinations.verify_payment_is_successfully_completed()"
 });
 formatter.result({
-  "duration": 20344,
+  "duration": 43585,
   "status": "passed"
 });
 });

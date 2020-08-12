@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.dkatalislabs.basecorelogic.BaseTest;
+import com.dkatalislabs.testbase.BaseTest;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;

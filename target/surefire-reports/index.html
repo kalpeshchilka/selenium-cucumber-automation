@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-com_dkatalislabs_TestRunner_TestRunner" class="navigator-link">
-              <span class="suite-name border-passed">com.dkatalislabs.TestRunner.TestRunner</span>
+              <span class="suite-name border-failed">com.dkatalislabs.TestRunner.TestRunner</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-com_dkatalislabs_TestRunner_TestRunner" class="hide-methods passed suite-com_dkatalislabs_TestRunner_TestRunner"> (hide)</a> <!-- hide-methods passed suite-com_dkatalislabs_TestRunner_TestRunner -->
-                      <a href="#" panel-name="suite-com_dkatalislabs_TestRunner_TestRunner" class="show-methods passed suite-com_dkatalislabs_TestRunner_TestRunner"> (show)</a> <!-- show-methods passed suite-com_dkatalislabs_TestRunner_TestRunner -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-com_dkatalislabs_TestRunner_TestRunner" class="hide-methods failed suite-com_dkatalislabs_TestRunner_TestRunner"> (hide)</a> <!-- hide-methods failed suite-com_dkatalislabs_TestRunner_TestRunner -->
+                      <a href="#" panel-name="suite-com_dkatalislabs_TestRunner_TestRunner" class="show-methods failed suite-com_dkatalislabs_TestRunner_TestRunner"> (show)</a> <!-- show-methods failed suite-com_dkatalislabs_TestRunner_TestRunner -->
                     </span>
-                    <div class="method-list-content passed suite-com_dkatalislabs_TestRunner_TestRunner">
+                    <div class="method-list-content failed suite-com_dkatalislabs_TestRunner_TestRunner">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-com_dkatalislabs_TestRunner_TestRunner" title="com.dkatalislabs.TestRunner.TestRunner" class="method navigator-link" hash-for-method="feature(Tests and verifies End to End Checkout flow)">feature(Tests and verifies End to End Checkout flow)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-com_dkatalislabs_TestRunner_TestRunner -->
+                    </div> <!-- method-list-content failed suite-com_dkatalislabs_TestRunner_TestRunner -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-com_dkatalislabs_TestRunner_TestRunner" class="panel com_dkatalislabs_TestRunner_TestRunner">
-          <div class="suite-com_dkatalislabs_TestRunner_TestRunner-class-passed">
+          <div class="suite-com_dkatalislabs_TestRunner_TestRunner-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.dkatalislabs.TestRunner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -131,12 +131,40 @@
                   </a> <!-- feature(Tests and verifies End to End Checkout flow) -->
                   <span class="method-name">feature</span>
                   <span class="parameters">(Tests and verifies End to End Checkout flow)</span>
+                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.WebDriverException
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.dkatalislabs.TestRunner.TestRunner.feature(TestRunner.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.WebDriverException
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1771)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1763)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+	at ✽.When User proceeds for Checkout(features/BuyProduct.feature:8)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-com_dkatalislabs_TestRunner_TestRunner-class-passed -->
+          </div> <!-- suite-com_dkatalislabs_TestRunner_TestRunner-class-failed -->
         </div> <!-- panel com_dkatalislabs_TestRunner_TestRunner -->
         <div panel-name="test-xml-com_dkatalislabs_TestRunner_TestRunner" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -200,12 +228,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'com.dkatalislabs.TestRunner.TestRunner')
-data.setCell(0, 3, 491);
+data.setCell(0, 3, 36658);
 window.suiteTableData['com_dkatalislabs_TestRunner_TestRunner']= { tableData: data, tableDiv: 'times-div-com_dkatalislabs_TestRunner_TestRunner'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 491 ms</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-com_dkatalislabs_TestRunner_TestRunner">
               </div> <!-- times-div-com_dkatalislabs_TestRunner_TestRunner -->
             </div> <!-- times-div -->
@@ -237,16 +265,18 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">feature(Tests and verifies End to End Checkout flow)</span>
-                <span class="method-start">5028 ms</span>
+                <span class="method-start">5269 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">5523 ms</span>
+                <span class="method-start">41936 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">terminateApp</span>
-                <span class="method-start">5534 ms</span>
+                <span class="method-start">41963 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
