@@ -11,7 +11,6 @@ public class HomePage extends ActionMethods {
 	public void clickBuyNowButton() {
 		waitForElementPresent(buyNowButton, ELEMENT_LOCATE_BY.XPATH, 200);
 		clickElement(buyNowButton, ELEMENT_LOCATE_BY.XPATH);
-		waitForCertainPeriod(100);
 	}
 
 	public void verifyHomePage() {

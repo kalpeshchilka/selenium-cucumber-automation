@@ -18,7 +18,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5267164531,
+              "duration": 5168219111,
               "status": "passed"
             },
             "line": 7,
@@ -30,7 +30,7 @@
           },
           {
             "result": {
-              "duration": 41493351666,
+              "duration": 20993831294,
               "status": "passed"
             },
             "line": 8,
@@ -42,8 +42,9 @@
           },
           {
             "result": {
-              "duration": 4106414,
-              "status": "passed"
+              "duration": 9180281872,
+              "error_message": "java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.WebDriverException\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:381)\n\tat org.openqa.selenium.By$ById.findElement(By.java:194)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)\n\tat com.dkatalislabs.pages.BuyProductPage.enterBanksOTP(BuyProductPage.java:55)\n\tat com.dkatalislabs.stepDefinations.BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(BuyProductStepDefinations.java:40)\n\tat ✽.And Enters valid Credit Card payment details as 4811 1111 1111 1114 and 12/24 and 123 and 112233(features/BuyProduct.feature:9)\n",
+              "status": "failed"
             },
             "line": 9,
             "name": "Enters valid Credit Card payment details as 4811 1111 1111 1114 and 12/24 and 123 and 112233",
@@ -78,8 +79,7 @@
           },
           {
             "result": {
-              "duration": 43585,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
             "name": "Verify payment is successfully completed",

@@ -35,11 +35,14 @@ public class BuyProductStepDefinations extends BaseTest {
 	@And("^Enters valid Credit Card payment details as (.+) and (.+) and (.+) and (.+)$")
 	public void enters_valid_credit_card_payment_details_as_and_and_and(String cardnumber, String expriydate,
 			String cvvnumber, String banksotp) throws Throwable {
-
+		buyProductPage.enterCreditCardDetails(cardnumber, expriydate, cvvnumber);
+		buyProductPage.clickPayNowButton();
+		buyProductPage.enterBanksOTP(banksotp);
 	}
 
 	@Then("^Verify payment is successfully completed$")
 	public void verify_payment_is_successfully_completed() throws Throwable {
+		buyProductPage.verifyTransactionSuccessfullMsg();
 	}
 
 }

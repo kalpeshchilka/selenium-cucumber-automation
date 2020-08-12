@@ -16,9 +16,9 @@ import com.dkatalislabs.utilities.Utility.ELEMENT_LOCATE_BY;
 
 public class ActionMethods extends BaseTest {
 
-	public void waitForCertainPeriod(long sec) {
+	public void waitForCertainPeriod(long milliSec) {
 		try {
-			Thread.sleep(sec);
+			Thread.sleep(milliSec);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -42,6 +42,11 @@ public class ActionMethods extends BaseTest {
 			highlight(element);
 			return element;
 
+		case CLASSNAME:
+			element = driver.findElement(By.className(locator));
+			highlight(element);
+			return element;
+
 		default:
 			return null;
 		}
@@ -49,7 +54,7 @@ public class ActionMethods extends BaseTest {
 
 	public void clickElement(String locator, ELEMENT_LOCATE_BY ele) {
 		findElement(locator, ele).click();
-		waitForCertainPeriod(5000);
+		waitForCertainPeriod(100);
 	}
 
 	public void waitForElementPresent(String locator, ELEMENT_LOCATE_BY ele, int waitTime) {
@@ -64,7 +69,11 @@ public class ActionMethods extends BaseTest {
 			break;
 
 		case NAME:
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator)));
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.name(locator)));
+			break;
+
+		case CLASSNAME:
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.className(locator)));
 			break;
 
 		}
@@ -74,8 +83,8 @@ public class ActionMethods extends BaseTest {
 	public void waitForPageLoad() {
 
 		(new WebDriverWait(driver, 5)).until(new ExpectedCondition<Boolean>() {
-			public Boolean apply(WebDriver d) {
-				JavascriptExecutor js = (JavascriptExecutor) d;
+			public Boolean apply(WebDriver driver) {
+				JavascriptExecutor js = (JavascriptExecutor) driver;
 				String readyState = js.executeScript("return document.readyState").toString();
 				return (Boolean) readyState.equals("complete");
 			}
@@ -85,6 +94,11 @@ public class ActionMethods extends BaseTest {
 	public WebElement waitForVisibilityOfElement(String locator, int timeOutPeriod) {
 		WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutPeriod);
 		return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+	}
+
+	public WebElement waitForClickabilityOfElement(String locator, int timeOutPeriod) {
+		WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutPeriod);
+		return webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
 	}
 
 	public void inputValue(String locator, String value, ELEMENT_LOCATE_BY ele) {
@@ -109,9 +123,13 @@ public class ActionMethods extends BaseTest {
 		driver.get(url);
 		waitForPageLoad();
 	}
-	
+
 	public void switchToFrameById(String frameId) {
 		driver.switchTo().frame(frameId);
+	}
+	
+	public void switchToFrameByIndex(int index) {
+		driver.switchTo().frame(index);
 	}
 
 	public String getCurrentUrl() {
@@ -157,6 +175,13 @@ public class ActionMethods extends BaseTest {
 		WebElement webElement = findElement(locator, element);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", webElement);
+	}
+	
+	public void clickElementUsingJS(String locator, ELEMENT_LOCATE_BY element) {
+		WebElement webElement = findElement(locator, element);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", webElement);
+		waitForCertainPeriod(1000);
 	}
 
 	public void hoverOnElement(String locator, ELEMENT_LOCATE_BY ele) {
