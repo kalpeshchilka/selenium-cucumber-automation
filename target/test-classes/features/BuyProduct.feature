@@ -1,5 +1,5 @@
 #Author: chilkakalpesh@gmail.com
-@tag
+
 Feature: Tests and verifies End to End Checkout flow
 
   @tag2

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-08-12T11:03:49 IST" name="com.dkatalislabs.TestRunner.TestRunner" finished-at="2020-08-12T11:03:55 IST" duration-ms="5658">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@71623278]" name="feature" class="com.dkatalislabs.TestRunner.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2020-08-12T11:03:49 IST" name="Command line test" finished-at="2020-08-12T11:03:55 IST" duration-ms="5658">
+      <class name="com.dkatalislabs.TestRunner.TestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@71623278]" started-at="2020-08-12T11:03:49 IST" name="setUpClass" finished-at="2020-08-12T11:03:54 IST" duration-ms="4922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@71623278]" started-at="2020-08-12T11:03:54 IST" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-08-12T11:03:55 IST" duration-ms="491" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tests and verifies End to End Checkout flow]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@71623278]" started-at="2020-08-12T11:03:55 IST" name="tearDownClass" finished-at="2020-08-12T11:03:55 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="terminateApp()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@71623278]" started-at="2020-08-12T11:03:55 IST" name="terminateApp" finished-at="2020-08-12T11:03:55 IST" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateApp -->
+      </class> <!-- com.dkatalislabs.TestRunner.TestRunner -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.dkatalislabs.TestRunner.TestRunner -->
+</testng-results>
