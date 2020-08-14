@@ -33,12 +33,12 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "User proceeds for Checkout",
+  "name": "User proceeds for Checkout with Credit Card Payment",
   "keyword": "When "
 });
 formatter.step({
   "line": 8,
-  "name": "Enters valid Credit Card payment details as \u003cCardNumber\u003e and \u003cExpriyDate\u003e and \u003cCVVNumber\u003e and \u003cBanksOTP\u003e",
+  "name": "Enters Credit Card payment details as \u003cCardNumber\u003e and \u003cExpriyDate\u003e and \u003cCVVNumber\u003e and \u003cBanksOTP\u003e",
   "keyword": "And "
 });
 formatter.step({
@@ -96,12 +96,12 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "User proceeds for Checkout",
+  "name": "User proceeds for Checkout with Credit Card Payment",
   "keyword": "When "
 });
 formatter.step({
   "line": 8,
-  "name": "Enters valid Credit Card payment details as 4811 1111 1111 1114 and 12/24 and 123 and 112233",
+  "name": "Enters Credit Card payment details as 4811 1111 1111 1114 and 12/24 and 123 and 112233",
   "matchedColumns": [
     0,
     1,
@@ -119,53 +119,53 @@ formatter.match({
   "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
 });
 formatter.result({
-  "duration": 5283018167,
+  "duration": 5261565631,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
 });
 formatter.result({
-  "duration": 8521226646,
+  "duration": 8698899688,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "4811 1111 1111 1114",
-      "offset": 44
+      "offset": 38
     },
     {
       "val": "12/24",
-      "offset": 68
+      "offset": 62
     },
     {
       "val": "123",
-      "offset": 78
+      "offset": 72
     },
     {
       "val": "112233",
-      "offset": 86
+      "offset": 80
     }
   ],
   "location": "BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 14570210614,
+  "duration": 12356931305,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.verify_payment_is_successfully_completed()"
 });
 formatter.result({
-  "duration": 36057270,
+  "duration": 29287001,
   "status": "passed"
 });
 formatter.scenarioOutline({
   "line": 17,
-  "name": "Verify user is successfully able to purchase Pillow using correct Credit Card payment details",
+  "name": "Verify user is unable to purchase Pillow using incorrect Credit Card payment details",
   "description": "",
-  "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-successfully-able-to-purchase-pillow-using-correct-credit-card-payment-details",
+  "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-unable-to-purchase-pillow-using-incorrect-credit-card-payment-details",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
@@ -182,12 +182,12 @@ formatter.step({
 });
 formatter.step({
   "line": 19,
-  "name": "User proceeds for Checkout",
+  "name": "User proceeds for Checkout with Credit Card Payment",
   "keyword": "When "
 });
 formatter.step({
   "line": 20,
-  "name": "Enters valid Credit Card payment details as \u003cCardNumber\u003e and \u003cExpriyDate\u003e and \u003cCVVNumber\u003e and \u003cBanksOTP\u003e",
+  "name": "Enters Credit Card payment details as \u003cCardNumber\u003e and \u003cExpriyDate\u003e and \u003cCVVNumber\u003e and \u003cBanksOTP\u003e",
   "keyword": "And "
 });
 formatter.step({
@@ -199,7 +199,7 @@ formatter.examples({
   "line": 23,
   "name": "",
   "description": "",
-  "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-successfully-able-to-purchase-pillow-using-correct-credit-card-payment-details;",
+  "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-unable-to-purchase-pillow-using-incorrect-credit-card-payment-details;",
   "rows": [
     {
       "cells": [
@@ -209,7 +209,7 @@ formatter.examples({
         "BanksOTP"
       ],
       "line": 24,
-      "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-successfully-able-to-purchase-pillow-using-correct-credit-card-payment-details;;1"
+      "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-unable-to-purchase-pillow-using-incorrect-credit-card-payment-details;;1"
     },
     {
       "cells": [
@@ -219,16 +219,16 @@ formatter.examples({
         "112233"
       ],
       "line": 25,
-      "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-successfully-able-to-purchase-pillow-using-correct-credit-card-payment-details;;2"
+      "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-unable-to-purchase-pillow-using-incorrect-credit-card-payment-details;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
   "line": 25,
-  "name": "Verify user is successfully able to purchase Pillow using correct Credit Card payment details",
+  "name": "Verify user is unable to purchase Pillow using incorrect Credit Card payment details",
   "description": "",
-  "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-successfully-able-to-purchase-pillow-using-correct-credit-card-payment-details;;2",
+  "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-unable-to-purchase-pillow-using-incorrect-credit-card-payment-details;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
@@ -245,12 +245,12 @@ formatter.step({
 });
 formatter.step({
   "line": 19,
-  "name": "User proceeds for Checkout",
+  "name": "User proceeds for Checkout with Credit Card Payment",
   "keyword": "When "
 });
 formatter.step({
   "line": 20,
-  "name": "Enters valid Credit Card payment details as 4911 1111 1111 1113 and 02/21 and 123 and 112233",
+  "name": "Enters Credit Card payment details as 4911 1111 1111 1113 and 02/21 and 123 and 112233",
   "matchedColumns": [
     0,
     1,
@@ -268,46 +268,46 @@ formatter.match({
   "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
 });
 formatter.result({
-  "duration": 5009206582,
+  "duration": 5006781587,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
 });
 formatter.result({
-  "duration": 8455087749,
+  "duration": 8575221825,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "4911 1111 1111 1113",
-      "offset": 44
+      "offset": 38
     },
     {
       "val": "02/21",
-      "offset": 68
+      "offset": 62
     },
     {
       "val": "123",
-      "offset": 78
+      "offset": 72
     },
     {
       "val": "112233",
-      "offset": 86
+      "offset": 80
     }
   ],
   "location": "BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 14747581782,
+  "duration": 12314883603,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.verify_payment_is_failed()"
 });
 formatter.result({
-  "duration": 58453704,
+  "duration": 33900833,
   "status": "passed"
 });
 });

@@ -22,7 +22,7 @@ public class BuyProductPage extends ActionMethods {
 	public static String transactionFailedReason = "//div[@class=\"text-failed\"]/span";
 
 	public void clickCheckoutButton() {
-		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 200);
+		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 1000);
 		clickElement(checkoutButton, ELEMENT_LOCATE_BY.XPATH);
 	}
 
@@ -65,6 +65,7 @@ public class BuyProductPage extends ActionMethods {
 		String transactionMessage = driver.findElement(By.xpath(transactionSuccessMsg)).getText();
 		System.out.println("Transaction message: " + transactionMessage);
 		Assert.assertEquals(transactionMessage, "Transaction successful");
+		switchFrameToDefaultContent();
 	}
 
 	public void verifyTransactionFailedMsg() {
@@ -76,6 +77,7 @@ public class BuyProductPage extends ActionMethods {
 		String transactionReasonMessage = driver.findElement(By.xpath(transactionFailedReason)).getText();
 		System.out.println("Transaction Failed Reason message: " + transactionReasonMessage);
 		Assert.assertEquals(transactionReasonMessage, "Your card got declined by the bank");
+		switchFrameToDefaultContent();
 	}
 
 }
