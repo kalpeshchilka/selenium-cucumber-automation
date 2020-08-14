@@ -54,7 +54,7 @@ public class ActionMethods extends BaseTest {
 
 	public void clickElement(String locator, ELEMENT_LOCATE_BY ele) {
 		findElement(locator, ele).click();
-		waitForCertainPeriod(100);
+		waitForCertainPeriod(1000);
 	}
 
 	public void waitForElementPresent(String locator, ELEMENT_LOCATE_BY ele, int waitTime) {
@@ -81,7 +81,6 @@ public class ActionMethods extends BaseTest {
 	}
 
 	public void waitForPageLoad() {
-
 		(new WebDriverWait(driver, 5)).until(new ExpectedCondition<Boolean>() {
 			public Boolean apply(WebDriver driver) {
 				JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -127,9 +126,13 @@ public class ActionMethods extends BaseTest {
 	public void switchToFrameById(String frameId) {
 		driver.switchTo().frame(frameId);
 	}
-	
+
 	public void switchToFrameByIndex(int index) {
 		driver.switchTo().frame(index);
+	}
+
+	public static void switchFrameToDefaultContent() {
+		driver.switchTo().defaultContent();
 	}
 
 	public String getCurrentUrl() {
@@ -176,7 +179,7 @@ public class ActionMethods extends BaseTest {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", webElement);
 	}
-	
+
 	public void clickElementUsingJS(String locator, ELEMENT_LOCATE_BY element) {
 		WebElement webElement = findElement(locator, element);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;

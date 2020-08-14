@@ -1,7 +1,6 @@
 package com.dkatalislabs.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import com.dkatalislabs.utilities.ActionMethods;
 import com.dkatalislabs.utilities.Utility.ELEMENT_LOCATE_BY;
@@ -17,10 +16,10 @@ public class BuyProductPage extends ActionMethods {
 	public static String payNowButton = "//span[text()='Pay Now']";
 	public static String bankOTPField = "//input[@name='PaRes']";
 	public static String okButton = "//button[@type=\"submit\" and text()='OK']";
-	public static String transactionMsg = "//div[@text='Transaction successful']";
+	public static String transactionMsg = "//div[@class=\"text-success text-bold\"]";
 
 	public void clickCheckoutButton() {
-		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 20);
+		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 200);
 		clickElement(checkoutButton, ELEMENT_LOCATE_BY.XPATH);
 	}
 
@@ -30,7 +29,7 @@ public class BuyProductPage extends ActionMethods {
 	}
 
 	public void selectCreditCardPaymentType() {
-		waitForElementPresent(creditCardPayment, ELEMENT_LOCATE_BY.XPATH, 20);
+		waitForElementPresent(creditCardPayment, ELEMENT_LOCATE_BY.XPATH, 200);
 		clickElement(creditCardPayment, ELEMENT_LOCATE_BY.XPATH);
 	}
 
@@ -42,26 +41,24 @@ public class BuyProductPage extends ActionMethods {
 
 	public void clickPayNowButton() {
 		waitForClickabilityOfElement(payNowButton, 20);
-		waitForElementPresent(payNowButton, ELEMENT_LOCATE_BY.XPATH, 20);
+		waitForElementPresent(payNowButton, ELEMENT_LOCATE_BY.XPATH, 200);
 		clickElementUsingJS(payNowButton, ELEMENT_LOCATE_BY.XPATH);
 	}
 
 	public void enterBanksOTP(String otpValue) {
-		waitForCertainPeriod(1000);
 		switchToFrameByIndex(0);
+		waitForElementPresent(bankOTPField, ELEMENT_LOCATE_BY.XPATH, 1000);
 		clickElement(bankOTPField, ELEMENT_LOCATE_BY.XPATH);
 		inputValue(bankOTPField, otpValue, ELEMENT_LOCATE_BY.XPATH);
 		clickElement(okButton, ELEMENT_LOCATE_BY.XPATH);
-		WebElement element = driver.findElement(By.id("snap-midtrans"));
-		driver.switchTo().frame(element);
-//		driver.switchTo().defaultContent();
+		switchFrameToDefaultContent();
 	}
 
 	public void verifyTransactionSuccessfullMsg() {
-//		switchToFrameById("snap-midtrans");
-//		switchToFrameByIndex(0);
-//		verifyElementPresent(transactionMsg, ELEMENT_LOCATE_BY.XPATH);
+		switchToFrameByIndex(0);
 		String transactionMessage = driver.findElement(By.xpath(transactionMsg)).getText();
+		System.out.println("Text written on the login button is- " + transactionMessage);
+
 		if (transactionMessage.equals("Transaction successful")) {
 			System.out.println("Transaction successfull!");
 		} else
