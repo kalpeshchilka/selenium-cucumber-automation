@@ -12,8 +12,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.dkatalislabs.utilities.ActionMethods;
-
 public class BaseTest {
 
 	public static WebDriver driver;
@@ -38,8 +36,8 @@ public class BaseTest {
 			String exePath = System.getProperty("user.dir") + "//lib//chromedriver";
 			System.setProperty("webdriver.chrome.driver", exePath);
 			driver = new ChromeDriver();
-		} else if (browserName.equalsIgnoreCase("chrome")) {
-			String exePath = System.getProperty("user.dir") + "\\lib\\geckodriver.exe";
+		} else if (browserName.equalsIgnoreCase("firefox")) {
+			String exePath = System.getProperty("user.dir") + "//lib//geckodriver";
 			System.setProperty("webdriver.gecko.driver", exePath);
 			driver = new FirefoxDriver();
 		}

@@ -24,7 +24,7 @@ public class BuyProductStepDefinations extends BaseTest {
 		homePage.verifyHomePage();
 	}
 
-	@When("^User proceeds for Checkout$")
+	@When("^User proceeds for Checkout with Credit Card Payment$")
 	public void user_proceeds_for_checkout() throws Throwable {
 		homePage.clickBuyNowButton();
 		buyProductPage.clickCheckoutButton();
@@ -32,7 +32,7 @@ public class BuyProductStepDefinations extends BaseTest {
 		buyProductPage.selectCreditCardPaymentType();
 	}
 
-	@And("^Enters valid Credit Card payment details as (.+) and (.+) and (.+) and (.+)$")
+	@And("^Enters Credit Card payment details as (.+) and (.+) and (.+) and (.+)$")
 	public void enters_valid_credit_card_payment_details_as_and_and_and(String cardnumber, String expriydate,
 			String cvvnumber, String banksotp) throws Throwable {
 		buyProductPage.enterCreditCardDetails(cardnumber, expriydate, cvvnumber);

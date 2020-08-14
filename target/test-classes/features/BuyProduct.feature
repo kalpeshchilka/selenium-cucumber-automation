@@ -4,8 +4,8 @@ Feature: Tests and verifies End to End Checkout flow
   @tag2
   Scenario Outline: Verify user is successfully able to purchase Pillow using correct Credit Card payment details
   	Given User is on the homepage
-  	When User proceeds for Checkout
-  	And Enters valid Credit Card payment details as <CardNumber> and <ExpriyDate> and <CVVNumber> and <BanksOTP>
+  	When User proceeds for Checkout with Credit Card Payment
+  	And Enters Credit Card payment details as <CardNumber> and <ExpriyDate> and <CVVNumber> and <BanksOTP>
   	Then Verify payment is successfully completed
 
     Examples: 
@@ -16,8 +16,8 @@ Feature: Tests and verifies End to End Checkout flow
   @tag2
   Scenario Outline: Verify user is unable to purchase Pillow using incorrect Credit Card payment details
   	Given User is on the homepage
-  	When User proceeds for Checkout
-  	And Enters valid Credit Card payment details as <CardNumber> and <ExpriyDate> and <CVVNumber> and <BanksOTP>
+  	When User proceeds for Checkout with Credit Card Payment
+  	And Enters Credit Card payment details as <CardNumber> and <ExpriyDate> and <CVVNumber> and <BanksOTP>
   	Then Verify payment is Failed
   
     Examples: 
