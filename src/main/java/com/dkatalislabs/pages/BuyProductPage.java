@@ -1,6 +1,7 @@
 package com.dkatalislabs.pages;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import com.dkatalislabs.utilities.ActionMethods;
 import com.dkatalislabs.utilities.Utility.ELEMENT_LOCATE_BY;
@@ -16,7 +17,9 @@ public class BuyProductPage extends ActionMethods {
 	public static String payNowButton = "//span[text()='Pay Now']";
 	public static String bankOTPField = "//input[@name='PaRes']";
 	public static String okButton = "//button[@type=\"submit\" and text()='OK']";
-	public static String transactionMsg = "//div[@class=\"text-success text-bold\"]";
+	public static String transactionSuccessMsg = "//div[@class=\"text-success text-bold\"]";
+	public static String transactionFailMsg = "//div[@class=\"text-failed text-bold\"]/span";
+	public static String transactionFailedReason = "//div[@class=\"text-failed\"]/span";
 
 	public void clickCheckoutButton() {
 		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 200);
@@ -24,7 +27,10 @@ public class BuyProductPage extends ActionMethods {
 	}
 
 	public void clickContinueButton() {
-		switchToFrameById("snap-midtrans");
+		// Switching the frame using id is very slow as compare to switching frame by
+		// index
+//		switchToFrameById("snap-midtrans");
+		switchToFrameByIndex(0);
 		clickElement(continueButton, ELEMENT_LOCATE_BY.XPATH);
 	}
 
@@ -47,7 +53,7 @@ public class BuyProductPage extends ActionMethods {
 
 	public void enterBanksOTP(String otpValue) {
 		switchToFrameByIndex(0);
-		waitForElementPresent(bankOTPField, ELEMENT_LOCATE_BY.XPATH, 1000);
+		waitForElementPresent(bankOTPField, ELEMENT_LOCATE_BY.XPATH, 10000);
 		clickElement(bankOTPField, ELEMENT_LOCATE_BY.XPATH);
 		inputValue(bankOTPField, otpValue, ELEMENT_LOCATE_BY.XPATH);
 		clickElement(okButton, ELEMENT_LOCATE_BY.XPATH);
@@ -56,17 +62,20 @@ public class BuyProductPage extends ActionMethods {
 
 	public void verifyTransactionSuccessfullMsg() {
 		switchToFrameByIndex(0);
-		String transactionMessage = driver.findElement(By.xpath(transactionMsg)).getText();
-		System.out.println("Text written on the login button is- " + transactionMessage);
-
-		if (transactionMessage.equals("Transaction successful")) {
-			System.out.println("Transaction successfull!");
-		} else
-			System.out.println("Transaction Failed!");
+		String transactionMessage = driver.findElement(By.xpath(transactionSuccessMsg)).getText();
+		System.out.println("Transaction message: " + transactionMessage);
+		Assert.assertEquals(transactionMessage, "Transaction successful");
 	}
 
 	public void verifyTransactionFailedMsg() {
+		switchToFrameByIndex(0);
+		String transactionMessage = driver.findElement(By.xpath(transactionFailMsg)).getText();
+		System.out.println("Transaction message: " + transactionMessage);
+		Assert.assertEquals(transactionMessage, "Transaction failed");
 
+		String transactionReasonMessage = driver.findElement(By.xpath(transactionFailedReason)).getText();
+		System.out.println("Transaction Failed Reason message: " + transactionReasonMessage);
+		Assert.assertEquals(transactionReasonMessage, "Your card got declined by the bank");
 	}
 
 }
