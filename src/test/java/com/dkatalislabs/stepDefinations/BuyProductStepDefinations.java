@@ -45,4 +45,9 @@ public class BuyProductStepDefinations extends BaseTest {
 		buyProductPage.verifyTransactionSuccessfullMsg();
 	}
 
+	@Then("^Verify payment is Failed$")
+	public void verify_payment_is_failed() throws Throwable {
+		buyProductPage.verifyTransactionFailedMsg();
+	}
+
 }

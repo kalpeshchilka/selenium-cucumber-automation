@@ -54,7 +54,7 @@ public class ActionMethods extends BaseTest {
 
 	public void clickElement(String locator, ELEMENT_LOCATE_BY ele) {
 		findElement(locator, ele).click();
-		waitForCertainPeriod(1000);
+		waitForCertainPeriod(2000);
 	}
 
 	public void waitForElementPresent(String locator, ELEMENT_LOCATE_BY ele, int waitTime) {
@@ -147,7 +147,6 @@ public class ActionMethods extends BaseTest {
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 				js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element,
 						"border: 2px solid red;");
-
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -184,7 +183,7 @@ public class ActionMethods extends BaseTest {
 		WebElement webElement = findElement(locator, element);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", webElement);
-		waitForCertainPeriod(1000);
+		waitForCertainPeriod(3000);
 	}
 
 	public void hoverOnElement(String locator, ELEMENT_LOCATE_BY ele) {
