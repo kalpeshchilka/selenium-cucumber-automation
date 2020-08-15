@@ -16,6 +16,7 @@ public class BaseTest {
 
 	public static WebDriver driver;
 	public static Properties property;
+	public static String featureName;
 
 	/*
 	 * Initialize the drivers using property files and call appropriate driver based

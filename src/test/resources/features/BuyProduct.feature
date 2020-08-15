@@ -1,5 +1,5 @@
 #Author: chilkakalpesh@gmail.com
-Feature: Tests and verifies End to End Checkout flow
+Feature: Test and verify End to End Checkout flow
 
   @SmokeTest
   Scenario Outline: Verify user is successfully able to purchase Pillow using correct Credit Card payment details
