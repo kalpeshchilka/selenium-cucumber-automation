@@ -9,7 +9,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.gherkin.model.Feature;
+import com.dkatalislabs.testbase.BaseTest;
 import com.dkatalislabs.utilities.ActionMethods;
 
 public class TestListener implements ITestListener {
@@ -29,7 +29,7 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public synchronized void onTestStart(ITestResult result) {
-		System.out.println("********* Executing test::" + (result.getMethod().getMethodName() + " *********"));
+		System.out.println("********* Executing feature::" + (BaseTest.featureName + " *********"));
 		ExtentTest extentTest = extent.createTest(getClass().getSimpleName(), result.getName());
 		test.set(extentTest);
 	}

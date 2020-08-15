@@ -12,19 +12,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.aventstack.extentreports.gherkin.model.Scenario;
-
 public class BaseTest {
 
 	public static WebDriver driver;
 	public static Properties property;
+	public static String featureName;
 
 	/*
 	 * Initialize the drivers using property files and call appropriate driver based
 	 * on browser value
 	 */
 	@BeforeMethod
-	public static WebDriver initialization(String browserName) {
+	public static WebDriver initialization(String browserName, String featureName) {
 		try {
 			property = new Properties();
 			FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//project.properties");
@@ -32,7 +31,7 @@ public class BaseTest {
 		} catch (IOException e) {
 			e.getMessage();
 		}
-//		String browser = browserName;
+		BaseTest.featureName = featureName;
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			String exePath = System.getProperty("user.dir") + "//lib//chromedriver";
