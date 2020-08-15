@@ -32,7 +32,7 @@ public class BuyProductStepDefinations extends BaseTest {
 		buyProductPage.selectCreditCardPaymentType();
 	}
 
-	@And("^Enters Credit Card payment details as (.+) and (.+) and (.+) and (.+)$")
+    @And("^Enters Credit Card payment details with CardNumber as (.+) , ExpriyDate as (.+) , CVVNumber as (.+) and BanksOTP as (.+)$")
 	public void enters_valid_credit_card_payment_details_as_and_and_and(String cardnumber, String expriydate,
 			String cvvnumber, String banksotp) throws Throwable {
 		buyProductPage.enterCreditCardDetails(cardnumber, expriydate, cvvnumber);

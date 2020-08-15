@@ -22,7 +22,7 @@ formatter.scenarioOutline({
   "tags": [
     {
       "line": 4,
-      "name": "@tag2"
+      "name": "@SmokeTest"
     }
   ]
 });
@@ -38,7 +38,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "Enters Credit Card payment details as \u003cCardNumber\u003e and \u003cExpriyDate\u003e and \u003cCVVNumber\u003e and \u003cBanksOTP\u003e",
+  "name": "Enters Credit Card payment details with CardNumber as \u003cCardNumber\u003e , ExpriyDate as \u003cExpriyDate\u003e , CVVNumber as \u003cCVVNumber\u003e and BanksOTP as \u003cBanksOTP\u003e",
   "keyword": "And "
 });
 formatter.step({
@@ -85,7 +85,7 @@ formatter.scenario({
   "tags": [
     {
       "line": 4,
-      "name": "@tag2"
+      "name": "@SmokeTest"
     }
   ]
 });
@@ -101,7 +101,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "Enters Credit Card payment details as 4811 1111 1111 1114 and 12/24 and 123 and 112233",
+  "name": "Enters Credit Card payment details with CardNumber as 4811 1111 1111 1114 , ExpriyDate as 12/24 , CVVNumber as 123 and BanksOTP as 112233",
   "matchedColumns": [
     0,
     1,
@@ -119,46 +119,46 @@ formatter.match({
   "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
 });
 formatter.result({
-  "duration": 5259763275,
+  "duration": 5115821588,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
 });
 formatter.result({
-  "duration": 8738584709,
+  "duration": 8894965711,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "4811 1111 1111 1114",
-      "offset": 38
+      "offset": 54
     },
     {
       "val": "12/24",
-      "offset": 62
+      "offset": 90
     },
     {
       "val": "123",
-      "offset": 72
+      "offset": 111
     },
     {
       "val": "112233",
-      "offset": 80
+      "offset": 131
     }
   ],
   "location": "BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 12443887484,
+  "duration": 12363963668,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.verify_payment_is_successfully_completed()"
 });
 formatter.result({
-  "duration": 28395605,
+  "duration": 29157395,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -171,7 +171,7 @@ formatter.scenarioOutline({
   "tags": [
     {
       "line": 16,
-      "name": "@tag2"
+      "name": "@SmokeTest"
     }
   ]
 });
@@ -187,7 +187,7 @@ formatter.step({
 });
 formatter.step({
   "line": 20,
-  "name": "Enters Credit Card payment details as \u003cCardNumber\u003e and \u003cExpriyDate\u003e and \u003cCVVNumber\u003e and \u003cBanksOTP\u003e",
+  "name": "Enters Credit Card payment details with CardNumber as \u003cCardNumber\u003e , ExpriyDate as \u003cExpriyDate\u003e , CVVNumber as \u003cCVVNumber\u003e and BanksOTP as \u003cBanksOTP\u003e",
   "keyword": "And "
 });
 formatter.step({
@@ -234,7 +234,7 @@ formatter.scenario({
   "tags": [
     {
       "line": 16,
-      "name": "@tag2"
+      "name": "@SmokeTest"
     }
   ]
 });
@@ -250,7 +250,7 @@ formatter.step({
 });
 formatter.step({
   "line": 20,
-  "name": "Enters Credit Card payment details as 4911 1111 1111 1113 and 02/21 and 123 and 112233",
+  "name": "Enters Credit Card payment details with CardNumber as 4911 1111 1111 1113 , ExpriyDate as 02/21 , CVVNumber as 123 and BanksOTP as 112233",
   "matchedColumns": [
     0,
     1,
@@ -268,46 +268,46 @@ formatter.match({
   "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
 });
 formatter.result({
-  "duration": 5004809972,
+  "duration": 5008233668,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
 });
 formatter.result({
-  "duration": 8617520790,
+  "duration": 8611665553,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "4911 1111 1111 1113",
-      "offset": 38
+      "offset": 54
     },
     {
       "val": "02/21",
-      "offset": 62
+      "offset": 90
     },
     {
       "val": "123",
-      "offset": 72
+      "offset": 111
     },
     {
       "val": "112233",
-      "offset": 80
+      "offset": 131
     }
   ],
   "location": "BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 12189008676,
+  "duration": 12490992497,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.verify_payment_is_failed()"
 });
 formatter.result({
-  "duration": 28999486,
+  "duration": 31512804,
   "status": "passed"
 });
 });

@@ -147,9 +147,6 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.dkatalislabs.reporting.TestListener&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.dkatalislabs.TestRunner.TestRunner&quot;/&gt;
@@ -204,7 +201,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'com.dkatalislabs.TestRunner.TestRunner')
-data.setCell(0, 3, 52361);
+data.setCell(0, 3, 52888);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -242,15 +239,15 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">feature(Tests and verifies End to End Checkout flow)</span>
-                <span class="method-start">8685 ms</span>
+                <span class="method-start">10952 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">61055 ms</span>
+                <span class="method-start">63842 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">terminateApp</span>
-                <span class="method-start">61065 ms</span>
+                <span class="method-start">64158 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

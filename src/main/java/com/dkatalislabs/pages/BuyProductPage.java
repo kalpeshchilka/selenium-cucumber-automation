@@ -22,12 +22,12 @@ public class BuyProductPage extends ActionMethods {
 	public static String transactionFailedReason = "//div[@class=\"text-failed\"]/span";
 
 	public void clickCheckoutButton() {
-		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 2000);
+		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 200);
 		clickElement(checkoutButton, ELEMENT_LOCATE_BY.XPATH);
 	}
 
 	public void clickContinueButton() {
-		// Switching the frame using id is very slow as compare to switching frame by
+		// Switching the frame using id is slow as compare to switching frame by
 		// index
 //		switchToFrameById("snap-midtrans");
 		switchToFrameByIndex(0);
@@ -53,7 +53,7 @@ public class BuyProductPage extends ActionMethods {
 
 	public void enterBanksOTP(String otpValue) {
 		switchToFrameByIndex(0);
-		waitForElementPresent(bankOTPField, ELEMENT_LOCATE_BY.XPATH, 10000);
+		waitForElementPresent(bankOTPField, ELEMENT_LOCATE_BY.XPATH, 200);
 		clickElement(bankOTPField, ELEMENT_LOCATE_BY.XPATH);
 		inputValue(bankOTPField, otpValue, ELEMENT_LOCATE_BY.XPATH);
 		clickElement(okButton, ELEMENT_LOCATE_BY.XPATH);

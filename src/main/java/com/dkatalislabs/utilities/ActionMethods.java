@@ -96,11 +96,6 @@ public class ActionMethods extends BaseTest {
 		});
 	}
 
-	public WebElement waitForVisibilityOfElement(String locator, int timeOutPeriod) {
-		WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutPeriod);
-		return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-	}
-
 	public WebElement waitForClickabilityOfElement(String locator, int timeOutPeriod) {
 		WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutPeriod);
 		return webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
@@ -110,23 +105,6 @@ public class ActionMethods extends BaseTest {
 		findElement(locator, ele).clear();
 		findElement(locator, ele).sendKeys(value);
 		waitForCertainPeriod(1000);
-	}
-
-	public boolean verifyElementPresent(String locator, ELEMENT_LOCATE_BY ele) {
-		waitForElementPresent(locator, ele, 2000);
-		WebElement element = findElement(locator, ele);
-		if (element.isDisplayed()) {
-			Assert.assertTrue(true, "Element is displayed. !!!!!");
-			return true;
-		} else {
-			Assert.fail("Element is not present.!!!!!");
-			return false;
-		}
-	}
-
-	public void launchUrl(String url) {
-		driver.get(url);
-		waitForPageLoad();
 	}
 
 	public void switchToFrameById(String frameId) {
@@ -159,42 +137,11 @@ public class ActionMethods extends BaseTest {
 		}
 	}
 
-	public void selectByValueFromDropDown(String locator, String valueTobeSelected, ELEMENT_LOCATE_BY ele) {
-		WebElement element = null;
-		element = findElement(locator, ele);
-		Select webCheckBox = new Select(element);
-		webCheckBox.selectByValue(valueTobeSelected);
-	}
-
-	public void selectByPartOfVisibleText(String locator, String valueTobeSelected, ELEMENT_LOCATE_BY ele) {
-		WebElement element = null;
-		element = findElement(locator, ele);
-		Select dropDown = new Select(element);
-		int index = 0;
-		for (WebElement option : dropDown.getOptions()) {
-			if (option.getText().toLowerCase().contains(valueTobeSelected.toLowerCase()))
-				break;
-			index++;
-		}
-		dropDown.selectByIndex(index);
-	}
-
-	public void scrollToElement(String locator, ELEMENT_LOCATE_BY element) {
-		WebElement webElement = findElement(locator, element);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", webElement);
-	}
-
 	public void clickElementUsingJS(String locator, ELEMENT_LOCATE_BY element) {
 		WebElement webElement = findElement(locator, element);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", webElement);
 		waitForCertainPeriod(3000);
-	}
-
-	public void hoverOnElement(String locator, ELEMENT_LOCATE_BY ele) {
-		Actions action = new Actions(driver);
-		action.moveToElement(findElement(locator, ele)).build().perform();
 	}
 
 	public static String getScreenshot() {
