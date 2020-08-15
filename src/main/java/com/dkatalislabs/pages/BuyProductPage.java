@@ -6,6 +6,14 @@ import org.testng.Assert;
 import com.dkatalislabs.utilities.ActionMethods;
 import com.dkatalislabs.utilities.Utility.ELEMENT_LOCATE_BY;
 
+/**
+ * 
+ * This class consist of all the locators need to perform actions on Product Buy
+ * Page
+ * 
+ * @author kalpesh
+ *
+ */
 public class BuyProductPage extends ActionMethods {
 
 	public static String checkoutButton = "//div[@class=\"cart-checkout\" and text()='CHECKOUT']";

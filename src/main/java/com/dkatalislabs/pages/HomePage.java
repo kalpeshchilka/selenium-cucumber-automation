@@ -5,6 +5,13 @@ import org.testng.Assert;
 import com.dkatalislabs.utilities.ActionMethods;
 import com.dkatalislabs.utilities.Utility.ELEMENT_LOCATE_BY;
 
+/**
+ * 
+ * This class consist of all the locators need to perform actions on Home Page
+ * 
+ * @author kalpesh
+ *
+ */
 public class HomePage extends ActionMethods {
 	public static String buyNowButton = "//a[@class=\"btn buy\" and text()='BUY NOW']";;
 

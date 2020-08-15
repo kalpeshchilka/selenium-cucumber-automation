@@ -1,12 +1,8 @@
 #Author: chilkakalpesh@gmail.com
-Feature: Tests and verifies End to End Checkout flow
+Feature: Test and verify End to End Checkout flow
 
-<<<<<<< HEAD
   @SmokeTest
   Scenario Outline: Verify user is successfully able to purchase Pillow using correct Credit Card payment details                                             # features/BuyProduct.feature:5
-=======
-  Scenario Outline: Verify user is successfully able to purchase Pillow using correct Credit Card payment details # features/BuyProduct.feature:4
->>>>>>> 5585daa5a0ccdb6e341beb701c7d20eb1e341890
     Given User is on the homepage
     When User proceeds for Checkout with Credit Card Payment
     And Enters Credit Card payment details with CardNumber as <CardNumber> , ExpriyDate as <ExpriyDate> , CVVNumber as <CVVNumber> and BanksOTP as <BanksOTP>
@@ -14,7 +10,6 @@ Feature: Tests and verifies End to End Checkout flow
 
     Examples: 
 
-<<<<<<< HEAD
   @SmokeTest
   Scenario Outline: Verify user is successfully able to purchase Pillow using correct Credit Card payment details                                 # features/BuyProduct.feature:13
     Given User is on the homepage                                                                                                                 # BuyProductStepDefinations.user_is_on_the_homepage()
@@ -24,15 +19,6 @@ Feature: Tests and verifies End to End Checkout flow
 
   @SmokeTest
   Scenario Outline: Verify user is unable to purchase Pillow using incorrect Credit Card payment details                                                      # features/BuyProduct.feature:17
-=======
-  Scenario Outline: Verify user is successfully able to purchase Pillow using correct Credit Card payment details # features/BuyProduct.feature:12
-    Given User is on the homepage                                                                                 # BuyProductStepDefinations.user_is_on_the_homepage()
-    When User proceeds for Checkout with Credit Card Payment                                                      # BuyProductStepDefinations.user_proceeds_for_checkout()
-    And Enters Credit Card payment details as 4811 1111 1111 1114 and 12/24 and 123 and 112233                    # BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)
-    Then Verify payment is successfully completed                                                                 # BuyProductStepDefinations.verify_payment_is_successfully_completed()
-
-  Scenario Outline: Verify user is unable to purchase Pillow using incorrect Credit Card payment details   # features/BuyProduct.feature:15
->>>>>>> 5585daa5a0ccdb6e341beb701c7d20eb1e341890
     Given User is on the homepage
     When User proceeds for Checkout with Credit Card Payment
     And Enters Credit Card payment details with CardNumber as <CardNumber> , ExpriyDate as <ExpriyDate> , CVVNumber as <CVVNumber> and BanksOTP as <BanksOTP>
@@ -40,17 +26,9 @@ Feature: Tests and verifies End to End Checkout flow
 
     Examples: 
 
-<<<<<<< HEAD
   @SmokeTest
   Scenario Outline: Verify user is unable to purchase Pillow using incorrect Credit Card payment details                                          # features/BuyProduct.feature:25
     Given User is on the homepage                                                                                                                 # BuyProductStepDefinations.user_is_on_the_homepage()
     When User proceeds for Checkout with Credit Card Payment                                                                                      # BuyProductStepDefinations.user_proceeds_for_checkout()
     And Enters Credit Card payment details with CardNumber as 4911 1111 1111 1113 , ExpriyDate as 02/21 , CVVNumber as 123 and BanksOTP as 112233 # BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)
     Then Verify payment is Failed                                                                                                                 # BuyProductStepDefinations.verify_payment_is_failed()
-=======
-  Scenario Outline: Verify user is unable to purchase Pillow using incorrect Credit Card payment details # features/BuyProduct.feature:23
-    Given User is on the homepage                                                                        # BuyProductStepDefinations.user_is_on_the_homepage()
-    When User proceeds for Checkout with Credit Card Payment                                             # BuyProductStepDefinations.user_proceeds_for_checkout()
-    And Enters Credit Card payment details as 4911 1111 1111 1113 and 02/21 and 123 and 112233           # BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)
-    Then Verify payment is Failed                                                                        # BuyProductStepDefinations.verify_payment_is_failed()
->>>>>>> 5585daa5a0ccdb6e341beb701c7d20eb1e341890

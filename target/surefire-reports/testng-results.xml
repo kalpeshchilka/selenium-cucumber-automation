@@ -2,65 +2,41 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2020-08-15T16:48:39 IST" name="Suite" finished-at="2020-08-15T16:49:43 IST" duration-ms="64810">
+  <suite started-at="2020-08-15T17:40:17 IST" name="Suite" finished-at="2020-08-15T17:41:20 IST" duration-ms="63739">
     <groups>
       <group name="cucumber">
-        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@5ea434c8]" name="feature" class="com.dkatalislabs.TestRunner.TestRunner"/>
+        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@687e99d8]" name="feature" class="com.dkatalislabs.TestRunner.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-08-15T16:48:39 IST" name="Test" finished-at="2020-08-15T16:49:43 IST" duration-ms="64810">
+    <test started-at="2020-08-15T17:40:17 IST" name="Test" finished-at="2020-08-15T17:41:20 IST" duration-ms="63739">
       <class name="com.dkatalislabs.TestRunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(java.lang.String)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@5ea434c8]" started-at="2020-08-15T16:48:39 IST" name="setUpClass" finished-at="2020-08-15T16:48:49 IST" duration-ms="10843" status="PASS">
-=======
-  <suite started-at="2020-08-15T12:36:30 IST" name="Suite" finished-at="2020-08-15T12:37:30 IST" duration-ms="59464">
-    <groups>
-      <group name="cucumber">
-        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@76494737]" name="feature" class="com.dkatalislabs.TestRunner.TestRunner"/>
-      </group> <!-- cucumber -->
-    </groups>
-    <test started-at="2020-08-15T12:36:30 IST" name="Test" finished-at="2020-08-15T12:37:30 IST" duration-ms="59464">
-      <class name="com.dkatalislabs.TestRunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(java.lang.String)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@76494737]" started-at="2020-08-15T12:36:30 IST" name="setUpClass" finished-at="2020-08-15T12:36:36 IST" duration-ms="6116" status="PASS">
->>>>>>> 5585daa5a0ccdb6e341beb701c7d20eb1e341890
+        <test-method is-config="true" signature="setUpClass(java.lang.String)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@687e99d8]" started-at="2020-08-15T17:40:17 IST" name="setUpClass" finished-at="2020-08-15T17:40:25 IST" duration-ms="8625" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@5ea434c8]" started-at="2020-08-15T16:48:49 IST" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-08-15T16:49:42 IST" duration-ms="52888" status="PASS">
-=======
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@76494737]" started-at="2020-08-15T12:36:36 IST" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-08-15T12:37:30 IST" duration-ms="53140" status="PASS">
->>>>>>> 5585daa5a0ccdb6e341beb701c7d20eb1e341890
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@687e99d8]" started-at="2020-08-15T17:40:25 IST" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-08-15T17:41:19 IST" duration-ms="53980" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Tests and verifies End to End Checkout flow]]>
+                <![CDATA[Test and verify End to End Checkout flow]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@5ea434c8]" started-at="2020-08-15T16:49:42 IST" name="tearDownClass" finished-at="2020-08-15T16:49:43 IST" duration-ms="316" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@687e99d8]" started-at="2020-08-15T17:41:19 IST" name="tearDownClass" finished-at="2020-08-15T17:41:20 IST" duration-ms="310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="terminateApp()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@5ea434c8]" started-at="2020-08-15T16:49:43 IST" name="terminateApp" finished-at="2020-08-15T16:49:43 IST" duration-ms="640" status="PASS">
-=======
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@76494737]" started-at="2020-08-15T12:37:30 IST" name="tearDownClass" finished-at="2020-08-15T12:37:30 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="terminateApp()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@76494737]" started-at="2020-08-15T12:37:30 IST" name="terminateApp" finished-at="2020-08-15T12:37:30 IST" duration-ms="91" status="PASS">
->>>>>>> 5585daa5a0ccdb6e341beb701c7d20eb1e341890
+        <test-method is-config="true" signature="terminateApp()[pri:0, instance:com.dkatalislabs.TestRunner.TestRunner@687e99d8]" started-at="2020-08-15T17:41:20 IST" name="terminateApp" finished-at="2020-08-15T17:41:20 IST" duration-ms="635" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateApp -->

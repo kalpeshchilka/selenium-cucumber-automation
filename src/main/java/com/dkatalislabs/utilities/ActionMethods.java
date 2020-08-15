@@ -17,6 +17,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.dkatalislabs.testbase.BaseTest;
 import com.dkatalislabs.utilities.Utility.ELEMENT_LOCATE_BY;
 
+/**
+ * This class consist of all Generic Action Methods used to perform actions on the Web Page
+ * 
+ * @author kalpesh
+ *
+ */
 public class ActionMethods extends BaseTest {
 
 	public void waitForCertainPeriod(long milliSec) {
