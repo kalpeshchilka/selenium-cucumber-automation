@@ -9,8 +9,14 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+/**
+ * 
+ * This class consist of Step Definations for BuyProduct.feature file
+ * 
+ * @author kalpesh
+ *
+ */
 public class BuyProductStepDefinations extends BaseTest {
-
 	BuyProductPage buyProductPage;
 	HomePage homePage;
 
@@ -32,7 +38,7 @@ public class BuyProductStepDefinations extends BaseTest {
 		buyProductPage.selectCreditCardPaymentType();
 	}
 
-    @And("^Enters Credit Card payment details with CardNumber as (.+) , ExpriyDate as (.+) , CVVNumber as (.+) and BanksOTP as (.+)$")
+	@And("^Enters Credit Card payment details with CardNumber as (.+) , ExpriyDate as (.+) , CVVNumber as (.+) and BanksOTP as (.+)$")
 	public void enters_valid_credit_card_payment_details_as_and_and_and(String cardnumber, String expriydate,
 			String cvvnumber, String banksotp) throws Throwable {
 		buyProductPage.enterCreditCardDetails(cardnumber, expriydate, cvvnumber);

@@ -22,9 +22,15 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @RunWith(Cucumber.class)
 @CucumberOptions(monochrome = true, features = "classpath:features", glue = "com.dkatalislabs.stepDefinations", plugin = {
 		"pretty:target/executionReport/cucumber-pretty.txt", "html:target/executionReport/cucumber",
-		"json:target/executionReport/cucumber.json", "rerun:target/executionReport/rerun.txt" ,
-		"com.cucumber.listener.ExtentCucumberFormatter:target/executionReport/finalExtentReport.html" }, tags = { "@SmokeTest" })
-
+		"json:target/executionReport/cucumber.json", "rerun:target/executionReport/rerun.txt",
+		"com.cucumber.listener.ExtentCucumberFormatter:target/executionReport/finalExtentReport.html" }, tags = {
+				"@SmokeTest" })
+/**
+ * This class controls the Test run of the project and generate reports
+ * 
+ * @author kalpesh
+ *
+ */
 public class TestRunner {
 	BaseTest baseTest = new BaseTest();
 	private TestNGCucumberRunner testNGCucumberRunner;
@@ -56,12 +62,8 @@ public class TestRunner {
 
 	@AfterClass(alwaysRun = true)
 	public void terminateApp() {
-		BaseTest.driver.close();
 		Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "//config//extent-config.xml"));
-		Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
-		Reporter.setSystemInfo("OS", System.getProperty("os.name"));
-		Reporter.setSystemInfo("OS Version", System.getProperty("os.version"));
-		Reporter.setSystemInfo("Java Version", System.getProperty("java.version"));
+		BaseTest.driver.close();
 	}
 
 	public static String getFeatureName() {
