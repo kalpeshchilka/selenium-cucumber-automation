@@ -1,7 +1,6 @@
 #Author: chilkakalpesh@gmail.com
 Feature: Tests and verifies End to End Checkout flow
 
-  @tag2
   Scenario Outline: Verify user is successfully able to purchase Pillow using correct Credit Card payment details
   	Given User is on the homepage
   	When User proceeds for Checkout with Credit Card Payment
@@ -13,7 +12,6 @@ Feature: Tests and verifies End to End Checkout flow
       | 4811 1111 1111 1114 |     12/24  | 123 				|	112233		|
       
       
-  @tag2
   Scenario Outline: Verify user is unable to purchase Pillow using incorrect Credit Card payment details
   	Given User is on the homepage
   	When User proceeds for Checkout with Credit Card Payment

@@ -9,7 +9,7 @@
     "line": 2,
     "elements": [
       {
-        "line": 13,
+        "line": 12,
         "name": "Verify user is successfully able to purchase Pillow using correct Credit Card payment details",
         "description": "",
         "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-successfully-able-to-purchase-pillow-using-correct-credit-card-payment-details;;2",
@@ -18,10 +18,10 @@
         "steps": [
           {
             "result": {
-              "duration": 5259763275,
+              "duration": 5211267418,
               "status": "passed"
             },
-            "line": 6,
+            "line": 5,
             "name": "User is on the homepage",
             "match": {
               "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
@@ -30,10 +30,10 @@
           },
           {
             "result": {
-              "duration": 8738584709,
+              "duration": 8466333184,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "User proceeds for Checkout with Credit Card Payment",
             "match": {
               "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
@@ -42,10 +42,10 @@
           },
           {
             "result": {
-              "duration": 12443887484,
+              "duration": 13075431630,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "Enters Credit Card payment details as 4811 1111 1111 1114 and 12/24 and 123 and 112233",
             "match": {
               "arguments": [
@@ -78,26 +78,20 @@
           },
           {
             "result": {
-              "duration": 28395605,
+              "duration": 43514178,
               "status": "passed"
             },
-            "line": 9,
+            "line": 8,
             "name": "Verify payment is successfully completed",
             "match": {
               "location": "BuyProductStepDefinations.verify_payment_is_successfully_completed()"
             },
             "keyword": "Then "
           }
-        ],
-        "tags": [
-          {
-            "line": 4,
-            "name": "@tag2"
-          }
         ]
       },
       {
-        "line": 25,
+        "line": 23,
         "name": "Verify user is unable to purchase Pillow using incorrect Credit Card payment details",
         "description": "",
         "id": "tests-and-verifies-end-to-end-checkout-flow;verify-user-is-unable-to-purchase-pillow-using-incorrect-credit-card-payment-details;;2",
@@ -106,10 +100,10 @@
         "steps": [
           {
             "result": {
-              "duration": 5004809972,
+              "duration": 5008434286,
               "status": "passed"
             },
-            "line": 18,
+            "line": 16,
             "name": "User is on the homepage",
             "match": {
               "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
@@ -118,10 +112,10 @@
           },
           {
             "result": {
-              "duration": 8617520790,
+              "duration": 8412269828,
               "status": "passed"
             },
-            "line": 19,
+            "line": 17,
             "name": "User proceeds for Checkout with Credit Card Payment",
             "match": {
               "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
@@ -130,10 +124,10 @@
           },
           {
             "result": {
-              "duration": 12189008676,
+              "duration": 12814797975,
               "status": "passed"
             },
-            "line": 20,
+            "line": 18,
             "name": "Enters Credit Card payment details as 4911 1111 1111 1113 and 02/21 and 123 and 112233",
             "match": {
               "arguments": [
@@ -166,21 +160,15 @@
           },
           {
             "result": {
-              "duration": 28999486,
+              "duration": 53811817,
               "status": "passed"
             },
-            "line": 21,
+            "line": 19,
             "name": "Verify payment is Failed",
             "match": {
               "location": "BuyProductStepDefinations.verify_payment_is_failed()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 16,
-            "name": "@tag2"
           }
         ]
       }
