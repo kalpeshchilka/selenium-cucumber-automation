@@ -1,7 +1,13 @@
 package com.dkatalislabs.utilities;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -189,5 +195,17 @@ public class ActionMethods extends BaseTest {
 	public void hoverOnElement(String locator, ELEMENT_LOCATE_BY ele) {
 		Actions action = new Actions(driver);
 		action.moveToElement(findElement(locator, ele)).build().perform();
+	}
+
+	public static String getScreenshot() {
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String path = System.getProperty("user.dir") + "//Screenshot//" + System.currentTimeMillis() + ".png";
+		File destination = new File(path);
+		try {
+			FileUtils.copyFile(src, destination);
+		} catch (IOException e) {
+			System.out.println("Capture Failed " + e.getMessage());
+		}
+		return path;
 	}
 }

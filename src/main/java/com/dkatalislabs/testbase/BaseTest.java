@@ -12,6 +12,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.aventstack.extentreports.gherkin.model.Scenario;
+
 public class BaseTest {
 
 	public static WebDriver driver;
@@ -22,7 +24,7 @@ public class BaseTest {
 	 * on browser value
 	 */
 	@BeforeMethod
-	public static WebDriver initialization() {
+	public static WebDriver initialization(String browserName) {
 		try {
 			property = new Properties();
 			FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//project.properties");
@@ -30,7 +32,7 @@ public class BaseTest {
 		} catch (IOException e) {
 			e.getMessage();
 		}
-		String browserName = property.getProperty("browser");
+//		String browser = browserName;
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			String exePath = System.getProperty("user.dir") + "//lib//chromedriver";
