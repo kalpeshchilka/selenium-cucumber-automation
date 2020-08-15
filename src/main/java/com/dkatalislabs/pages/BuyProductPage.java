@@ -22,7 +22,7 @@ public class BuyProductPage extends ActionMethods {
 	public static String transactionFailedReason = "//div[@class=\"text-failed\"]/span";
 
 	public void clickCheckoutButton() {
-		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 1000);
+		waitForElementPresent(checkoutButton, ELEMENT_LOCATE_BY.XPATH, 2000);
 		clickElement(checkoutButton, ELEMENT_LOCATE_BY.XPATH);
 	}
 

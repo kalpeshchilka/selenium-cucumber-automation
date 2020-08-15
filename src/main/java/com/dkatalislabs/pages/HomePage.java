@@ -9,7 +9,7 @@ public class HomePage extends ActionMethods {
 	public static String buyNowButton = "//a[@class=\"btn buy\" and text()='BUY NOW']";;
 
 	public void clickBuyNowButton() {
-		waitForElementPresent(buyNowButton, ELEMENT_LOCATE_BY.XPATH, 1000);
+		waitForElementPresent(buyNowButton, ELEMENT_LOCATE_BY.XPATH, 2000);
 		clickElement(buyNowButton, ELEMENT_LOCATE_BY.XPATH);
 	}
 

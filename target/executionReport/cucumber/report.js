@@ -119,14 +119,14 @@ formatter.match({
   "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
 });
 formatter.result({
-  "duration": 5261565631,
+  "duration": 5259763275,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
 });
 formatter.result({
-  "duration": 8698899688,
+  "duration": 8738584709,
   "status": "passed"
 });
 formatter.match({
@@ -151,14 +151,14 @@ formatter.match({
   "location": "BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 12356931305,
+  "duration": 12443887484,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.verify_payment_is_successfully_completed()"
 });
 formatter.result({
-  "duration": 29287001,
+  "duration": 28395605,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -268,14 +268,14 @@ formatter.match({
   "location": "BuyProductStepDefinations.user_is_on_the_homepage()"
 });
 formatter.result({
-  "duration": 5006781587,
+  "duration": 5004809972,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.user_proceeds_for_checkout()"
 });
 formatter.result({
-  "duration": 8575221825,
+  "duration": 8617520790,
   "status": "passed"
 });
 formatter.match({
@@ -300,14 +300,14 @@ formatter.match({
   "location": "BuyProductStepDefinations.enters_valid_credit_card_payment_details_as_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 12314883603,
+  "duration": 12189008676,
   "status": "passed"
 });
 formatter.match({
   "location": "BuyProductStepDefinations.verify_payment_is_failed()"
 });
 formatter.result({
-  "duration": 33900833,
+  "duration": 28999486,
   "status": "passed"
 });
 });
