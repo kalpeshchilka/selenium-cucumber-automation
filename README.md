@@ -1,5 +1,5 @@
-# Selenium-Cucumber-Framework
-Automation scripts are developed using the Cucumber (v 3.x.x) BDD framework with Java as programming language. 
+# Selenium-Cucumber-Automation
+The Automation scripts in this project are developed using the Cucumber (v 3.x.x) BDD framework with Java as programming language. 
 It generates Extent HTML, Simple HTML and JSON reports as well.
 
 
