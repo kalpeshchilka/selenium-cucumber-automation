@@ -70,7 +70,7 @@ public class ActionMethods extends BaseTest {
 		WebDriverWait wait = new WebDriverWait(driver, waitTime);
 		switch (ele) {
 		case XPATH:
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
 			break;
 
 		case ID:
@@ -88,15 +88,15 @@ public class ActionMethods extends BaseTest {
 
 	}
 
-	public void waitForPageLoad() {
-		(new WebDriverWait(driver, 5)).until(new ExpectedCondition<Boolean>() {
-			public Boolean apply(WebDriver driver) {
-				JavascriptExecutor js = (JavascriptExecutor) driver;
-				String readyState = js.executeScript("return document.readyState").toString();
-				return (Boolean) readyState.equals("complete");
-			}
-		});
-	}
+//	public void waitForPageLoad() {
+//		(new WebDriverWait(driver, 5)).until(new ExpectedCondition<Boolean>() {
+//			public Boolean apply(WebDriver driver) {
+//				JavascriptExecutor js = (JavascriptExecutor) driver;
+//				String readyState = js.executeScript("return document.readyState").toString();
+//				return (Boolean) readyState.equals("complete");
+//			}
+//		});
+//	}
 
 	public WebElement waitForClickabilityOfElement(String locator, int timeOutPeriod) {
 		WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutPeriod);
