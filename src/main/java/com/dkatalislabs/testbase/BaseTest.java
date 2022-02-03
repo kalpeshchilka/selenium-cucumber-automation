@@ -3,6 +3,7 @@ package com.dkatalislabs.testbase;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,12 +35,14 @@ public class BaseTest {
 	@BeforeMethod
 	public static WebDriver initialization(String browserName) {
 		if (browserName.equalsIgnoreCase("chrome")) {
-			String exePath = System.getProperty("user.dir") + "//lib//chromedriver";
-			System.setProperty("webdriver.chrome.driver", exePath);
+			WebDriverManager.chromedriver().setup();
+//			String exePath = System.getProperty("user.dir") + "/lib/chromedriver";
+//			System.setProperty("webdriver.chrome.driver", exePath);
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			String exePath = System.getProperty("user.dir") + "//lib//geckodriver";
-			System.setProperty("webdriver.gecko.driver", exePath);
+			WebDriverManager.firefoxdriver().setup();
+//			String exePath = System.getProperty("user.dir") + "/lib/geckodriver";
+//			System.setProperty("webdriver.gecko.driver", exePath);
 			driver = new FirefoxDriver();
 		}
 
